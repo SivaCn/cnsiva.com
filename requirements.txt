@@ -1,0 +1,4 @@
+# Third party API's
+jinja2
+sqlalchemy
+bottle
