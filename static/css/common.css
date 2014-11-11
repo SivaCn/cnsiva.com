@@ -1,14 +1,12 @@
-/* General styles */
 body {
     margin:0;
     padding:0;
     border:0;           /* This removes the border around the viewport in old versions of IE */
     width:100%;
-    background:#fff;
+    background:#000000;
     min-width:600px;        /* Minimum width of layout - remove line if not required */
                     /* The min-width property does not work in old versions of Internet Explorer */
     font-size:90%;
-    color:#ffffff;
 }
 a {
     color:#369;
@@ -78,6 +76,7 @@ img {
     clear:both;
     float:left;
     width:100%;
+    color:#fff;
 }
 #header {
     border-bottom:1px solid #000;
@@ -163,11 +162,11 @@ img {
 }
 /* 2 Column (left menu) settings */
 .leftmenu {
-    background:#000000;        /* right column background colour */
+    background:#fff;        /* right column background colour */
 }
 .leftmenu .colleft {
     right:75%;          /* right column width */
-    background:#000000; /* left column background colour */
+    background:#f4f4f4; /* left column background colour */
 }
 .leftmenu .col1 {
     width:71%;          /* right column content width */
@@ -187,4 +186,5 @@ img {
 #footer p {
     padding:10px;
     margin:0;
+    color:#fff;
 }
