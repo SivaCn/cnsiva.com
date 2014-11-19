@@ -9,6 +9,12 @@ def index():
    """."""
    return views("frame_template.html")
 
+@bottle.route('/get_page_content/<page_name>', method=['GET', 'POST'])
+def get_page_content(page_name):
+   """."""
+   import pdb; pdb.set_trace()
+   print page_name
+
 @bottle.route('/sorry_page')
 def sorry_page():
     """Serve sorry page"""
@@ -20,7 +26,7 @@ def views(filename):
 
 @bottle.get('/<filename:re:.*\.js>')
 def javascripts(filename):
-    return bottle.static_file(filename, root='static/jscripts')
+    return bottle.static_file(filename, root='static/js')
 
 @bottle.get('/<filename:re:.*\.css>')
 def stylesheets(filename):
@@ -38,5 +44,6 @@ def main():
     bottle.run(host='0.0.0.0', port=80, reloader=True)
 
 if __name__ == "__main__":
+    print ">>>>"
     main()
 

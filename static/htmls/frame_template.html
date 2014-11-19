@@ -3,6 +3,8 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="common.css" title="" media="" />
+    <link rel="stylesheet" type="text/css" href="style.css" title="" media="" />
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -13,15 +15,34 @@
 </div>
 <div class="colmask leftmenu">
     <div class="colleft">
-        <div class="col1">
+        <div class="col1" id="column1">
             <!-- Column 1 start -->
-            Site is Under Construction
+            Site is Under Construction {{ data }}
             <!-- Column 1 end -->
         </div>
-        <div class="col2">
+        <div class="col2" id="colummn2">
             <!-- Column 2 start -->
-            <ul>
-                <li> About Me</li>
+            <ul class="mh-menu">
+                <li id="menu">
+                    <a href="#" onclick="get_right_page_content('column1', 'about_me')">
+                        <span></span> <span>About Me</span>
+                    </a><img src="1.jpg" alt="About Me"/>
+                </li>
+                <li id="menu">
+                    <a href="#" onclick="get_right_page_content('column1', 'profile')">
+                        <span></span> <span>About Me</span>
+                    </a><img src="1.jpg" alt="About Me"/>
+                </li>
+                <li id="menu">
+                    <a href="#" onclick="get_right_page_content('column1', 'blogs')">
+                        <span></span> <span>About Me</span>
+                    </a><img src="1.jpg" alt="About Me"/>
+                </li>
+                <li id="menu">
+                    <a href="#" onclick="get_right_page_content('column1', 'projects')">
+                        <span></span> <span>About Me</span>
+                    </a><img src="1.jpg" alt="About Me"/>
+                </li>
             </ul>
             <!-- Column 2 end -->
         </div>
