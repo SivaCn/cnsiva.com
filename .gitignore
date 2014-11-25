@@ -1,2 +1,10 @@
-# Git ignore files
+# Git ignore Directories
 usr/
+bin/
+include/
+lib/
+local/
+
+# Git ignore Files
+*~
+*.pyc
