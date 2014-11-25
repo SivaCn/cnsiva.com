@@ -1,89 +1,180 @@
 body {
-    margin:0;
-    padding:0;
-    border:0;           /* This removes the border around the viewport in old versions of IE */
-    width:100%;
-    background:#000000;
-    min-width:600px;        /* Minimum width of layout - remove line if not required */
-                    /* The min-width property does not work in old versions of Internet Explorer */
-    font-size:90%;
+    margin:0px;
+    background-color: #000;
+    }
+
+#header
+{
+    background: #ccc;
+    padding: 20px;
 }
 
-/* Header styles */
-#header {
-    clear:both;
-    float:left;
-    width:100%;
-    color:#fff;
-}
-#header {
-    border-bottom:1px solid #000;
-}
-#header p,
-#header h1,
-#header h2 {
-    padding:.4em 15px 0 15px;
-    margin:0;
+#header h1 { margin: 0; }
+
+#navigation
+{
+    float: left;
+    width: 100%;
+    background: #333;
 }
 
-/* 'widths' sub menu */
-#layoutdims {
-    clear:both;
-    background:#eee;
-    border-top:4px solid #000;
-    margin:0;
-    padding:6px 15px !important;
-    text-align:right;
+#navigation ul
+{
+    margin: 0;
+    padding: 0;
 }
-/* column container */
-.colmask {
-    position:relative;  /* This fixes the IE7 overflow hidden bug */
-    clear:both;
-    float:left;
-    width:100%;         /* width of whole page */
-    overflow:hidden;        /* This chops off any overhanging divs */
+
+#navigation ul li
+{
+    list-style-type: none;
+    display: inline;
 }
-/* common column settings */
-.colright,
-.colmid,
-.colleft {
-    float:left;
-    width:100%;
-    position:relative;
+
+#navigation li a
+{
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #fff;
 }
-.col1,
-.col2,
-.col3 {
-    float:left;
-    position:relative;
-    padding:0 0 1em 0;
-    overflow:hidden;
+
+#navigation li a:hover { background: #383; }
+
+#leftpane {
+  position: absolute;
+  left: 5px;
+  padding: 0px;
+  width: 10px;
 }
-/* 2 Column (left menu) settings */
-.leftmenu {
-    background:#fff;        /* right column background colour */
+
+#rightpane {
+  position: absolute;
+  margin-left: 450px;
+  padding: 0px;
+  color: white;
+  font-size: 150%;
+  margin-right: 15px;
 }
-.leftmenu .colleft {
-    right:75%;          /* right column width */
-    background:#f4f4f4; /* left column background colour */
+
+#content-container
+{
+    float: left;
+    width: 95%;
+    background: #000 url(layout-two-liquid-background.gif) repeat-y 68% 0;
 }
-.leftmenu .col1 {
-    width:71%;          /* right column content width */
-    left:102%;          /* 100% plus left column left padding */
+
+#content
+{
+    clear: left;
+    float: left;
+    width: 60%;
+    color: white;
+    padding: 0px 0;
+    margin: 0 0 0 4%;
+    display: inline;
 }
-.leftmenu .col2 {
-    width:21%;          /* left column content width (column width minus left and right padding) */
-    left:6%;            /* (right column left and right padding) plus (left column left padding) */
+
+#content h2 { margin: 0; }
+
+#container
+{
+    margin: 0px;
+    padding-top: 120px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    background: #000;
 }
-/* Footer styles */
-#footer {
-    clear:both;
-    float:left;
-    width:100%;
-    border-top:1px solid #000;
+
+#aside
+{
+    float: right;
+    width: 26%;
+    color: white;
+    padding: 20px 0;
+    margin: 0 3% 0 0;
+    display: inline;
 }
-#footer p {
-    padding:10px;
-    margin:0;
-    color:#fff;
+
+#aside h3 { margin: 0; }
+
+#stickyHeader {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    color: white;
+    overflow: visible;
+    z-index: 99;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    border-bottom: solid white 2px;
+    background-color: #000;
+    -webkit-box-shadow: 0px 5px 15px 0px #bfbfbf;
+    box-shadow: 0px 5px 15px 0px #bfbfbf;
+    height: 100px;}
+
+#stickyFooter {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    overflow: visible;
+    z-index: 99;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-top: solid white 2px;
+    background-color: #000;
+    -webkit-box-shadow: 0px -5px 15px 0px #bfbfbf;
+    box-shadow: 0px -5px 15px 0px #bfbfbf;
+    height: 40px;}
+
+#stickySideBar {
+    position: fixed;
+    top: 250px;
+    width: 340px;
+    height: 284px;
+    overflow: visible;
+    z-index: 99;
+    padding-left: 4px;
+    padding-top:4px;
+    border: solid white 2px;
+    background-color: #55bcff;
+    -webkit-box-shadow: 0px 0px 15px 0px #bfbfbf;
+    box-shadow: 0px 0px 15px 0px #bfbfbf;}
+
+
+#wrapper {width:960px; margin-left:auto; margin-right:auto;}
+#header {	margin-top:70px;
+border: solid black 1px; height:100px;}
+#body {}
+#leftSideBar {float: left;
+width: 340px;
+padding-right: 10px;}
+#rightSideBar {float: right;
+width: 591px;
+padding-left: 11px;
+border-left: 1px dashed #c6c6c6;}
+
+#footer {margin-bottom:70px;
+    border: solid black 1px; height:100px;}
+
+.center{width:960px; margin-left:auto; margin-right:auto;}
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
 }

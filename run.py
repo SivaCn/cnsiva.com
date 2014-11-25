@@ -2,6 +2,8 @@
 
 import bottle
 
+app = application = bottle.Bottle()
+
 # Static pages
 
 @bottle.route('/')
@@ -44,6 +46,4 @@ def main():
     bottle.run(host='0.0.0.0', port=80, reloader=True)
 
 if __name__ == "__main__":
-    print ">>>>"
     main()
-

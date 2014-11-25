@@ -8,47 +8,70 @@
 </head>
 
 <body>
-<div id="header">
+<div id="stickyHeader">
     <br>
     <p align="right"><font size="+7">Cn Siva</font> | Open Source Developer |</p>
     <br>
 </div>
-<div class="colmask leftmenu">
-    <div class="colleft">
-        <div class="col1" id="column1">
-            <!-- Column 1 start -->
-            Site is Under Construction {{ data }}
-            <!-- Column 1 end -->
+
+<div id="container">
+    <div id="content-container">
+        <div id="rightpane">
+
+            <pre>
+            {"widget": {
+                "debug": "on",
+                "window": {
+                    "title": "Sample Konfabulator Widget",
+                    "name": "main_window",
+                    "width": 500,
+                    "height": 500
+                },
+                "image": {
+                    "src": "Images/Sun.png",
+                    "name": "sun1",
+                    "hOffset": 250,
+                    "vOffset": 250,
+                    "alignment": "center"
+                },
+                "text": {
+                    "data": "Click Here",
+                    "size": 36,
+                    "style": "bold",
+                    "name": "text1",
+                    "hOffset": 250,
+                    "vOffset": 100,
+                    "alignment": "center",
+                    "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+                }
+            }}
+            </pre>
         </div>
-        <div class="col2" id="colummn2">
-            <!-- Column 2 start -->
-            <ul class="mh-menu">
-                <li id="menu">
-                    <a href="#" onclick="get_right_page_content('column1', 'about_me')">
-                        <span></span> <span>About Me</span>
-                    </a><img src="1.jpg" alt="About Me"/>
-                </li>
-                <li id="menu">
-                    <a href="#" onclick="get_right_page_content('column1', 'profile')">
-                        <span></span> <span>About Me</span>
-                    </a><img src="1.jpg" alt="About Me"/>
-                </li>
-                <li id="menu">
-                    <a href="#" onclick="get_right_page_content('column1', 'blogs')">
-                        <span></span> <span>About Me</span>
-                    </a><img src="1.jpg" alt="About Me"/>
-                </li>
-                <li id="menu">
-                    <a href="#" onclick="get_right_page_content('column1', 'projects')">
-                        <span></span> <span>About Me</span>
-                    </a><img src="1.jpg" alt="About Me"/>
-                </li>
-            </ul>
-            <!-- Column 2 end -->
+        <div id="leftpane">
+            <div class="col2" id="colummn2">
+                <ul class="mh-menu">
+                    <li id="menu">
+                        <a href="#"><span></span> <span>About Me</span></a><img src="1.jpg" alt="About Me"/>
+                    </li>
+                    <li id="menu">
+                        <a href="#"><span></span> <span>About Me</span></a><img src="2.jpg" alt="About Me"/>
+                    </li>
+                    <li id="menu">
+                        <a href="#"><span></span> <span>About Me</span></a><img src="3.jpg" alt="About Me"/>
+                    </li>
+                    <li id="menu">
+                        <a href="#"><span></span> <span>About Me</span></a><img src="4.jpg" alt="About Me"/>
+                    </li>
+                    <li id="menu">
+                        <a href="#"><span></span> <span>About Me</span></a><img src="1.jpg" alt="About Me"/>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
-<div id="footer">
+
+<div id="stickyFooter">
     <p align="center">Copy righted (c) 2008 - CnSiva.com</p>
 </div>
 
