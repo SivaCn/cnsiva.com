@@ -1,0 +1,10 @@
+CHANGES LOG
+===========
+
+0.1.01 (DD-MM-YYYY)
+-------------------
+    - Features
+
+    - Bugfixes
+
+    - Restructuring
