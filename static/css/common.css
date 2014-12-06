@@ -51,9 +51,9 @@ body {
 
 #rightpane {
   position: absolute;
-  margin-left: 450px;
+  margin-left: 300px;
   padding: 0px;
-  color: white;
+  color: black;
   font-size: 150%;
   margin-right: 15px;
 }
@@ -67,7 +67,9 @@ body {
 
 #content
 {
+    position: fixed;
     clear: left;
+    top: 140px;
     float: left;
     width: 60%;
     color: white;
