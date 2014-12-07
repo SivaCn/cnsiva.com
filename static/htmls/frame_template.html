@@ -29,7 +29,7 @@
                 -->
 
                 <li>
-                    <a class="entypo-newspaper" href="#"></a> <span>About Me</span>
+                    <a class="entypo-newspaper" href="#" onclick="return switchMenu('about_me');"></a> <span>About Me</span>
                 </li>
 
                 <!--
@@ -50,13 +50,41 @@
     </div>
 
     <div id="rightpane">
+    <font size="3">
     <pre>
-Hello welcome !
+#!/usr/bin/python
 
-        I am Cn Siva Open Source Developer,
-        this site is being migrated and improved
-        Please do visit later some time.
+import smtplib
+from parser import parse_mail_address
+
+class CnSiva(object):
+    """A Class that describes more about Me.
+    """
+    def __init__(self):
+        """Initialization Block.
+        """
+        self.name = <b>r"Cn Siva"</b>
+        self.website = <b>r"www.cnsiva.com"</b>
+        self.mail = r"cnsiva(dot)in(at)gmail(dot)com"
+        self.interest = <b>r"Open Source"</b>
+        self.preferred_language = <b>["Python", "Go"]</b>
+
+    def __call__(self):
+        """A method to Invite Me.
+        """
+        server = smtplib.SMTP('cnsiva.com')
+        server.sendmail("Your Mail ID", parse_mail_address(self.mail), "message")
+        server.quit()
+
+
+if __name__ == '__main__':
+    """The main call.
+    """
+    cnsiva = CnSiva()
+    cnsiva()
+
     </pre>
+    </font>
     </div>
 </div>
 
@@ -67,3 +95,4 @@ Hello welcome !
 </body>
 
 </html>
+
