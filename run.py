@@ -44,7 +44,7 @@ def get_json(filename):
 def stylesheets(filename):
     return bottle.static_file(filename, root='cnsiva/static/css')
 
-@app.get('/<filename:re:.*\.(jpg|png|gif|ico)>')
+@app.get('/<filename:re:.*\.(jpg|jpeg|png|gif|ico)>')
 def images(filename):
     return bottle.static_file(filename, root='cnsiva/static/images')
 

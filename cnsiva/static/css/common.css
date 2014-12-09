@@ -1,108 +1,12 @@
-body {
-    margin:0px;
-    background-color: #000;
-    }
-
-#header
-{
-    background: #ccc;
-    padding: 20px;
+.mask{
+   position: relative;
+   overflow: hidden;
+   margin: 0px auto;
+   width: 100%;
+   background-color: black;
 }
 
-#header h1 { margin: 0; }
-
-#navigation
-{
-    float: left;
-    width: 100%;
-    background: #333;
-}
-
-#navigation ul
-{
-    margin: 0;
-    padding: 0;
-}
-
-#navigation ul li
-{
-    list-style-type: none;
-    display: inline;
-}
-
-#navigation li a
-{
-    display: block;
-    float: left;
-    padding: 5px 10px;
-    color: #fff;
-    text-decoration: none;
-    border-right: 1px solid #fff;
-}
-
-#navigation li a:hover { background: #383; }
-
-#leftpane {
-  position: absolute;
-  left: 5px;
-  padding: 0px;
-  width: 10px;
-}
-
-#rightpane {
-  position: absolute;
-  margin-left: 300px;
-  padding: 0px;
-  color: black;
-  font-size: 80%;
-  margin-right: 15px;
-}
-
-#content-container
-{
-    float: left;
-    width: 95%;
-    background: #000 url(layout-two-liquid-background.gif) repeat-y 68% 0;
-}
-
-#content
-{
-    position: fixed;
-    clear: left;
-    top: 140px;
-    float: left;
-    width: 60%;
-    color: white;
-    padding: 0px 0;
-    margin: 0 0 0 4%;
-    display: inline;
-}
-
-#content h2 { margin: 0; }
-
-#container
-{
-    margin: 0px;
-    padding-top: 120px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    background: #000;
-}
-
-#aside
-{
-    float: right;
-    width: 26%;
-    color: white;
-    padding: 20px 0;
-    margin: 0 3% 0 0;
-    display: inline;
-}
-
-#aside h3 { margin: 0; }
-
-#stickyHeader {
+.header{
     position: fixed;
     top: 0px;
     width: 100%;
@@ -115,9 +19,43 @@ body {
     background-color: #000;
     -webkit-box-shadow: 0px 5px 15px 0px #bfbfbf;
     box-shadow: 0px 5px 15px 0px #bfbfbf;
-    height: 100px;}
+    height: 100px;
+}
 
-#stickyFooter {
+.colleft{
+   position: relative;
+   width: 100%;
+   right: 33%;
+   color: black;
+   background-color: white;
+}
+
+.col1{
+   position: fixed;
+   overflow: hidden;
+   float: left;
+   top: 200px;
+   width: 30%;
+   left: 70%;
+   color: black;
+   background-color: rgba(255, 255, 255, 0); /* Color white with alpha 0.9*/
+   background-color: white;
+}
+
+.col2{
+   z-index: -1;
+   position: relative;
+   overflow: hidden;
+   top: 150px;
+   float: left;
+   width: 70%;
+   left: 10%;
+   color: black;
+   background-color: white;
+}
+
+.footer{
+    color: white;
     position: fixed;
     bottom: 0px;
     width: 100%;
@@ -127,57 +65,16 @@ body {
     padding-top: 5px;
     padding-bottom: 3px;
     border-top: solid white 2px;
-    background-color: #000;
+    background-color: black;
     -webkit-box-shadow: 0px -5px 15px 0px #bfbfbf;
     box-shadow: 0px -5px 15px 0px #bfbfbf;
-    height: 40px;}
-
-#stickySideBar {
-    position: fixed;
-    top: 250px;
-    width: 340px;
-    height: 284px;
-    overflow: visible;
-    z-index: 99;
-    padding-left: 4px;
-    padding-top:4px;
-    border: solid white 2px;
-    background-color: #55bcff;
-    -webkit-box-shadow: 0px 0px 15px 0px #bfbfbf;
-    box-shadow: 0px 0px 15px 0px #bfbfbf;}
-
-
-#wrapper {width:960px; margin-left:auto; margin-right:auto;}
-#header {	margin-top:70px;
-border: solid black 1px; height:100px;}
-#body {}
-#leftSideBar {float: left;
-width: 340px;
-padding-right: 10px;}
-#rightSideBar {float: right;
-width: 591px;
-padding-left: 11px;
-border-left: 1px dashed #c6c6c6;}
-
-#footer {margin-bottom:70px;
-    border: solid black 1px; height:100px;}
-
-.center{width:960px; margin-left:auto; margin-right:auto;}
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    height: 40px;
 }
 
-.clearfix:after {
-    clear: both;
+body {
+   color: white;
+   padding: 0px;
+   margin: 0px;
+   font-size: 90%;
+   background-color: white;
 }
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-    *zoom: 1;
-}
-

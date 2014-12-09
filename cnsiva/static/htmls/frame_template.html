@@ -9,47 +9,19 @@
 </head>
 
 <body>
-<div id="stickyHeader">
+
+<div class="header">
     <br>
     <p align="right"><font size="+7">{ Cn Siva }</font> <font color="yellow"><b>Open Source Developer</b></font> &nbsp;&nbsp;&nbsp;&nbsp;</p>
     <br>
 </div>
 
-<div id="content">
-    <div id="leftpane">
-        <div class="col2" id="colummn2">
-            <ul>
-                <li>
-                    <a class="entypo-menu" href="http://www.cnsiva.com"></a> <span class="menu"> | Cn Siva | </span>
-                </li>
-                <!--
-                <li>
-                    <a class="entypo-star" href="#"></a> <span>Favorite</span>
-                </li>
-                -->
-                <li>
-                    <a class="entypo-newspaper" onclick="return switchMenu('about_me');"></a> <span>About Me</span>
-                </li>
-                <!--
-                <li>
-                    <a class="entypo-location" href="#"></a> <span>Find us</span>
-                </li>
+<div class="col1">
+    <a class="entypo-newspaper" onclick="return switchMenu('about_me');"></a> <span>About Me</span>
+</div>
 
-                <li>
-                    <a class="entypo-link" href="#"></a> <span>Share</span>
-                </li>
-
-                <li>
-                    <a class="entypo-help-circled" href="#"></a> <span>FAQ's</span>
-                </li>
-                -->
-            </ul>
-        </div>
-    </div>
-
-    <div id="rightpane">
-    <font size="3">
-    <pre>
+<div class="col2" id="page_content">
+<pre>
 #!/usr/bin/python
 
 import smtplib
@@ -80,17 +52,12 @@ if __name__ == '__main__':
     """
     cnsiva = CnSiva()
     cnsiva()
-
     </pre>
-    </font>
-    </div>
 </div>
 
-<div id="stickyFooter">
+<div class="footer">
     <p align="center">Copy righted (c) 2008 - CnSiva.com</p>
 </div>
 
 </body>
-
 </html>
-
