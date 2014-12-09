@@ -1,7 +1,8 @@
 #coding: utf-8
 
 import json
-import bottle
+from cnsiva import bottle
+from cnsiva import config
 
 app = application = bottle.Bottle()
 
@@ -15,7 +16,9 @@ def index():
 @app.route('/get_page_content/<page_name>', method=['GET'])
 def get_page_content(page_name):
    """."""
-   return get_json('about_me.json')
+   if not 'page_name' in config.json_list:
+      return "<p>OOPS! You have discovered a BUG, please let me know about this!</p>"
+   return get_json(config.json_list.get(page_name))
 
 @app.route('/sorry_page', method=['GET'])
 def sorry_page():
@@ -25,25 +28,25 @@ def sorry_page():
 
 @app.get('/<filename:re:.*\.(tpl|html)>')
 def views(filename):
-    return bottle.static_file(filename, root='static/htmls')
+    return bottle.static_file(filename, root='cnsiva/static/htmls')
 
 @app.get('/<filename:re:.*\.js>')
 def javascripts(filename):
-    return bottle.static_file(filename, root='static/js')
+    return bottle.static_file(filename, root='cnsiva/static/js')
 
 @app.get('/<filename:re:.*\.json>')
 def get_json(filename):
-    _json_object = bottle.static_file(filename, root='static/json')
+    _json_object = bottle.static_file(filename, root='cnsiva/static/json')
     _text_data = _json_object.body.readlines()
     return "<pre>" + json.dumps(json.loads(''.join(_text_data)), indent=4, sort_keys=True).replace('\n', '<br>') + "</pre>"
 
 @app.get('/<filename:re:.*\.css>')
 def stylesheets(filename):
-    return bottle.static_file(filename, root='static/css')
+    return bottle.static_file(filename, root='cnsiva/static/css')
 
 @app.get('/<filename:re:.*\.(jpg|png|gif|ico)>')
 def images(filename):
-    return bottle.static_file(filename, root='static/images')
+    return bottle.static_file(filename, root='cnsiva/static/images')
 
 ##  Web application main  # #
 def main():
