@@ -1,6 +1,8 @@
 
 # ------ Configs ------ #
-json_list = {'about_me': 'about_me.json',
-             'github_profile': 'github_profile.json',
-             }
+
+#              Master Key: (fd locator, file type)
+master_dict = {'about_me': ('about_me', 'snippet'),
+               'github_profile': ('github_profile', 'json')
+               }
 # ------ Configs ------ #

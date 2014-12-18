@@ -1,0 +1,30 @@
+#!/usr/bin/python
+
+import smtplib
+from parser import parse_mail_address
+
+class CnSiva(object):
+    """A Class that describes more about Me.
+    """
+    def __init__(self):
+        """Initialization Block.
+        """
+        self.name = <b>r"Cn Siva"</b>
+        self.website = <b>r"www.cnsiva.com"</b>
+        self.mail = r"cnsiva(dot)in(at)gmail(dot)com"
+        self.interest = <b>r"Open Source"</b>
+        self.preferred_language = <b>["Python", "Go"]</b>
+
+    def __call__(self):
+        """A method to Invite Me.
+        """
+        server = smtplib.SMTP('cnsiva.com')
+        server.sendmail("Your Mail ID", parse_mail_address(self.mail), "message")
+        server.quit()
+
+
+if __name__ == '__main__':
+    """The main call.
+    """
+    cnsiva = CnSiva()
+    cnsiva()
