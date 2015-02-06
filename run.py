@@ -3,6 +3,7 @@
 import json
 from cnsiva import bottle
 from cnsiva import config
+from cnsiva.quotes import Quotes
 from cnsiva.utils import SnippetFormatizer, JsonFormatizer
 
 app = application = bottle.Bottle()
@@ -12,7 +13,7 @@ app = application = bottle.Bottle()
 @app.route('/')
 def index():
    """."""
-   return views("frame_template.html")
+   return views("main_tpl.html")
 
 @app.route('/get_page_content/<page_name>', method=['GET'])
 def get_page_content(page_name):
@@ -28,11 +29,21 @@ def get_page_content(page_name):
         _page_content = get_snippet("""{0}.snippet""".format(file_name))
     elif file_type == 'json':
         _page_content = get_json("""{0}.json""".format(file_name))
+    elif file_type == 'html':
+        _view_obj = views("""{0}.html""".format(file_name))
+        _page_content = ''.join(_view_obj.body.readlines())
+    else:
+       _page_content = sorry_page(page_name)
 
     if not _page_content:
         return "No Content to be displayed !"
 
     return _page_content.replace(' ', '&nbsp;')
+
+@app.route('/get_quotes', method=['GET'])
+def get_quotes():
+   """."""
+   return Quotes().get_quote()
 
 @app.route('/show_main_page', method=['GET'])
 def show_main_page():
