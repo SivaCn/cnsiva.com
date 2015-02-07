@@ -31,14 +31,14 @@ def get_page_content(page_name):
         _page_content = get_json("""{0}.json""".format(file_name))
     elif file_type == 'html':
         _view_obj = views("""{0}.html""".format(file_name))
-        _page_content = ''.join(_view_obj.body.readlines())
+        _page_content = _view_obj  # ''.join(_view_obj.body.readlines())
     else:
        _page_content = sorry_page(page_name)
 
     if not _page_content:
         return "No Content to be displayed !"
 
-    return _page_content.replace(' ', '&nbsp;')
+    return _page_content  #.replace(' ', '&nbsp;')
 
 @app.route('/get_quotes', method=['GET'])
 def get_quotes():
