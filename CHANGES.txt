@@ -1,9 +1,20 @@
 CHANGES LOG
 ===========
 
-0.1.01 (DD-MM-YYYY)
+
+0.1.0 (07-02-2015)
 -------------------
     - Features
+      - change in running the instance
+      - update dos string
+      - Responsive UI added successfully
+      - Site: Stage 2 complete, runnable instance
+      - Round tested, running instance
+      - AJAX calls are made successful
+      - UI Alignments and other Filesystem setups
+      - Site First Showcase
+      - base framework with basic css
+      - added static filesystem
 
     - Bugfixes
 
