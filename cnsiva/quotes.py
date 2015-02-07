@@ -23,7 +23,7 @@ class Quotes(object):
     def __formatter(self, _quote, _author):
         """."""
         _template = """%(pre_processor)s
-                       <h5><p align="center"><b>Quote on Open Source</b></p></h5>
+                       <h5><p align="center"><b>Open Source Quote of the Day</b></p></h5>
                        %(pre_processor)s
                        <p align="center"><b>%(quote)s</b></p><br><br>
                        <p align="center">-- <b>%(author)s</b></p>"""
