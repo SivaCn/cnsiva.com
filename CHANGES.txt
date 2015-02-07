@@ -1,6 +1,13 @@
 CHANGES LOG
 ===========
 
+0.1.2 (DD-MM-YYYY)
+-------------------
+    - Features
+
+    - Bugfixes
+
+    - Restructuring
 
 0.1.0 (07-02-2015)
 -------------------
