@@ -4,6 +4,7 @@ CHANGES LOG
 0.1.2 (DD-MM-YYYY)
 -------------------
     - Features
+      - Additional Quotes Added
 
     - Bugfixes
 
