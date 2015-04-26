@@ -38,18 +38,42 @@
 
   <!-- columns should be the immediate child of a .row -->
   <br>
+
   <div class="row">
-    <div class="twelve columns dark">
-      <p align="right">
-          <font size="+4" color="black">{ Cn Siva }</font> <em>Full Stack Developer</em>&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="four columns outline left closed">
+      <font size="+4">&nbsp;</font>
+    </div>
+    <div class="four columns">
+      <p align="center">
+        <font size="+4" color="black">Cn Siva</font>
       </p>
+    </div>
+    <div class="four columns outline right closed">
+      <font size="+4">&nbsp;</font>Full Stack Developer
     </div>
   </div>
 
-  <br><br><br>
+  <div class="row">
+    <div class="four columns">
+      &nbsp;
+    </div>
+    <div class="four columns align center">
+      <p align="center">
+        <div class="menus" onclick="return getQuotes();">HOME</div>
+        <div class="menus" onclick="return switchMenu('about_me');">ABOUT ME</div>
+        <!--
+        <div class="menus" onclick="return switchMenu('skills');">SKILLS</div>
+        <div class="menus" onclick="return switchMenu('projects');">PROJECTS</div>
+        -->
+      </p>
+    </div>
+    <div class="four columns">
+      &nbsp;
+    </div>
+  </div>
 
   <div class="row">
-    <div class="ten columns">
+    <div class="twelve columns">
       <!-- Actual page contents -->
       <div id="page_content">
           &nbsp;
@@ -58,21 +82,11 @@
           </script>
       </div>
     </div>
-
-    <div class="two columns">
-      <button class="button" onclick="return getQuotes();">HOME</button>
-      <button class="button" onclick="return switchMenu('about_me');">ABOUT ME</button>
-      <button class="button" onclick="return switchMenu('skills');">SKILLS</button>
-      <button class="button" onclick="return switchMenu('projects');">PROJECTS</button>
-      <!--
-      <button class="button" onclick="return switchMenu('github_profile');">GITHUB</button>
-      -->
-
-      <p align="center"><br><br>
-      copy right &copy; 2008<br><a href="http://www.cnsiva.com" style="text-decoration: none;"><b>www.cnsiva.com</b></a>
-      </p>
-    </div>
   </div>
+
+<p align="center"><br><br>
+copy right &copy; 2008 <a href="http://www.cnsiva.com" style="text-decoration: none;"><b>www.cnsiva.com</b></a>
+</p>
 
 </div>
 <!-- End Document

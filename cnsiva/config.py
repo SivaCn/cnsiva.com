@@ -3,7 +3,7 @@
 
 #              Master Key: (fd locator, file type)
 master_dict = {'home': ('home_contents', 'html'),
-               'about_me': ('about_me', 'snippet'),
+               'about_me': ('about_me', 'html'),
                'projects': ('projects', 'html'),
                'skills': ('skills', 'html'),
                'github_profile': ('github_profile', 'json')
@@ -32,10 +32,6 @@ quote_list = [("""Certainly there's a phenomenon around open source. You know
                open and improving on other peoples' ideas and making it into what science is today and the
                incredible advances that we have had. And I compare that to witchcraft and alchemy, where
                openness was something you didn't do.""",
-               authors['0']
-               ),
-
-               ("""Software is like sex: it's better when it's free""",
                authors['0']
                ),
 
