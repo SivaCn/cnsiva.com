@@ -53,7 +53,7 @@ def show_main_page():
 @app.route('/sorry_page/<page_name>', method=['GET'])
 def sorry_page(page_name):
     """Serve sorry page"""
-    return '<p>Requested page does not Exist:</p>'.format(page_name)
+    return views("under_construction.html")
 
 @app.get('/<filename:re:.*\.(tpl|html)>')
 def views(filename):
