@@ -33,10 +33,10 @@ class Quotes(object):
                                -- <b>%(author)s</b>
                            </p>
                            <b>cnsiva@OpenSource#</b> <img src="/cursor_blink_1.gif" height="20" width="10">
-<br>
-                       </div> 
+                           <br>
+                       </div>
                        <div class="four columns outlined">
-                           <br>                            
+                           <br>
                            %(user_info)s
                            <br>
                            <font size="-2" color="red"> *** NOTE: None of your informations are being stored</font>
@@ -50,7 +50,7 @@ class Quotes(object):
 
         _user_template = """<b>Your IP Address: </b>%(ip)s"""
 
-        _user_info = {'ip': self.context.request.environ['REMOTE_ADDR'] or 'Unknown'}
+        _user_info = {'ip': self.context.request.remote_addr or 'Unknown'}
 
         _params.update({'user_info': _user_template % _user_info})
 
