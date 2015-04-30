@@ -43,7 +43,8 @@ def get_page_content(page_name):
 @app.route('/get_quotes', method=['GET'])
 def get_quotes():
    """."""
-   return Quotes().get_quote()
+   _quote = Quotes(context=bottle).get_quote()
+   return _quote
 
 @app.route('/show_main_page', method=['GET'])
 def show_main_page():
