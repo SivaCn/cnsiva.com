@@ -4,6 +4,7 @@
 #              Master Key: (fd locator, file type)
 master_dict = {'home': ('home_contents', 'html'),
                'about_me': ('about_me', 'html'),
+               'python_blog': ('python_blog', 'html'),
                'projects': ('projects', 'html'),
                'skills': ('skills', 'html'),
                'github_profile': ('github_profile', 'json')
