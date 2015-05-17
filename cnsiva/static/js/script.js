@@ -3,6 +3,21 @@
 * Description:
 *
 */
+function showPythonBlog() {
+    $.ajax({
+       url: "/python_blog",
+       type: "get",
+       data: {},
+       success: function(response){
+           $('#page_content').html(response)
+       }
+    });
+};
+
+/**
+* Description:
+*
+*/
 function showMainPage() {
     $.ajax({
        url: "/show_main_page",
