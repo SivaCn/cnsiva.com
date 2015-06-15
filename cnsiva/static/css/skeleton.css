@@ -93,6 +93,21 @@
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;}
 
+  .three.columns.outlined.lesslinespace,
+  .four.columns.outlined.lesslinespace,
+  .eight.columns.outlined.lesslinespace,
+  .ten.columns.outlined.lesslinespace{
+    align-content: space-around;
+    padding: 0 10px;
+    line-height: 1;
+    font-size: 80%;
+    background-color: #FFF;
+    border-radius: 4px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;}
+
   .four.columns.titled.outlined,
   .eight.columns.titled.outlined,
   .ten.columns.titled.outlined{
@@ -246,6 +261,14 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
+
+.indented_line{
+  color: #000;
+  padding: 0 30px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: lowercase;
+  cursor: pointer; }
 
 .menus {
   display: inline-block;

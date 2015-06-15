@@ -47,24 +47,20 @@ def get_quotes():
    _quote = Quotes(context=bottle).get_quote()
    return _quote
 
+@app.route('/fetch_blog_article/<param>', method=['GET'])
+def fetch_blog_article(param):
+    """."""
+    _blog_type, _article = param.split("::")
+    if _blog_type.lower() == 'python':
+        blog_obj = PythonBlog()
+    else:
+        return "Invalid Blog Type: {0}".format(_blog_type)
+
+    return blog_obj.fetch_article(_article)
+
 @app.route('/python_blog', method=['GET'])
 def python_blog():
     """."""
-    # return """<ol class="tree">
-    # <li>
-    #     <label for="folder2">Folder 2</label> <input type="checkbox" id="folder2" />
-    #     <ol>
-    #         <li class="file"><a href="">File 1</a></li>
-    #     </ol>
-    # </li>
-    # <li>
-    #     <label for="folder3">Folder 3</label> <input type="checkbox" id="folder3" />
-    #     <ol>
-    #         <li class="file"><a href="">File 1</a></li>
-    #     </ol>
-    # </li>
-    # </ol>"""
-
     python_blog_obj = PythonBlog()
     return python_blog_obj.get_page_content()
 

@@ -18,6 +18,22 @@ function showPythonBlog() {
 * Description:
 *
 */
+function showArticlesForBlog(blogType, articleName) {
+    $.ajax({
+        url: "/fetch_blog_article/" + blogType + "::" + articleName,
+       type: "get",
+       data: {},
+       success: function(response){
+           $('#blog_content').html(response)
+       }
+    });
+    window.scrollTo(0, 0);
+};
+
+/**
+* Description:
+*
+*/
 function showMainPage() {
     $.ajax({
        url: "/show_main_page",
