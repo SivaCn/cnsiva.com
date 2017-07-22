@@ -1,0 +1,76 @@
+/**
+
+  <link
+   href="https://fonts.googleapis.com/css?family=Dancing+Script|Exo+2|Oleo+Script|Rambla|Sacramento"
+   rel="stylesheet">
+
+  <!--
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Oleo Script', cursive;
+    font-family: 'Rambla', sans-serif;
+  -->
+*/
+
+.cn-super-border,
+.cn-left-side-border,
+.cn-right-side-border,
+.cn-top-side-border,
+.cn-bottom-side-border,
+.cn-all-side-border{
+    border-color: #000000;
+}
+
+.cn-left-side-border,
+.cn-all-side-border{
+    border-left-style: solid;
+}
+
+.cn-right-side-border,
+.all-side-border{
+    border-right-style: solid;
+}
+
+.cn-top-side-border,
+.cn-all-side-border{
+    border-top-style: solid;
+}
+
+.cn-bottom-side-border,
+.cn-all-side-border{
+    border-bottom-style: solid;
+}
+
+.cn-super-quote,
+.cn-block-quote,
+.cn-quote {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: right;
+}
+
+.cn-block-quote{
+    /** Enable border at the left side. */
+    border-left-style: solid;
+}
+
+.cn-super-font, /** Super class */
+.cn-logo-font /** Inherited for logo */ {
+    font-size: 15px;
+    /** please refer font section from the document. */
+    font-family: 'Exo 2', sans-serif;
+}
+
+.cn-logo-font /** Overridden for logo */ {
+    font-size: 45px;
+}
+
+span.line-break{
+    display: block;
+}
+
+.top-offset-header {
+    margin-top: 20px;
+}

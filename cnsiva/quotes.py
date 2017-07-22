@@ -3,6 +3,8 @@
 
 ## ------------ Imports ----------- ##
 import random
+
+import json as json
 from config import quote_list
 ## ------------ Imports ----------- ##
 
@@ -60,13 +62,8 @@ class Quotes(object):
 
     def get_quote(self):
         """."""
-        total_available_quotes = len(quote_list)
 
-        quote_to_get = self.__get_quote_number(total_available_quotes)
-
-        _quote, _author = quote_list[quote_to_get]
-
-        return self.__formatter(_quote, _author)
+        return json.dumps(quote_list)
 
 
 if __name__ == '__main__':
