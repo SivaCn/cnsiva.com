@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="/angular-ui-router.js"></script>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -47,26 +48,27 @@
 </head>
 <body class="cn-super-font" ng-app="cnsiva">
 
-  <div class="container">
+  <div class="container" ng-controller="homeOnLoadCtrl as ctrl">
 
     <div class="row top-offset-header"> <!-- start: first row-->
       <div class="col-sm-3 cn-logo-font cn-right-side-border">
         Cn Siva<br>
         <div class="text-uppercase cn-super-font">Python Full Stack Developer</div>
-        <img onclick="return getQuotes();"
+        <img ui-sref="hello"
              style="cursor:pointer"
              title="HOME PAGE"
              src="/home.png"
              height="20"
              width="20">
         </img>
-        <img onclick="return switchMenu('about_me');"
+        <img ui-sref="about"
              title="ABOUT ME (Cn Siva)"
              style="cursor:pointer"
              src="/programmer.png"
              height="20"
              width="20">
         </img>
+        <!--
         <img onclick="return showPythonBlog('python_blog');"
              title="Python Blog"
              style="cursor:pointer"
@@ -88,27 +90,24 @@
              height="20"
              width="20">
         </img>
+        -->
       </div>
       <!--<div class="col-sm-8 left-border left-offset-20 center">-->
-      <div class="col-sm-8 cn-quote" ng-controller="homeOnLoadCtrl">
-      {{ quote }}<span class="line-break">{{ saidBy }}</span>
+      <div class="col-sm-8 cn-quote">
+        {{ quote }}
+        <br><br>-- {{ saidBy }}
+        <img src="/cursor_blink_1.gif" height="20" width="10"></img>
       </div>
       <div class="col-sm-1">&nbsp;</div> <!-- hint: width spacer -->
     </div> <!-- end: first row-->
 
     <div class="row">
-      <div class="col-sm-11">
-        <!-- Actual page contents -->
+      <div class="col-sm-12 cn-terminal cn-line-space-before">
         <div id="page_content">
-            &nbsp;
-            <script>
-            //getQuotes();
-            </script>
+          <!-- Actual Page Content dividor -->
+          {{ page_content }}
+          <ui-view></ui-view>
         </div>
-      </div>
-
-      <div class="col-sm-1 outlined">
-      csdfa
       </div>
     </div>
 

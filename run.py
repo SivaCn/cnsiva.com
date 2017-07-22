@@ -3,7 +3,8 @@
 import json
 from cnsiva import bottle
 from cnsiva import config
-from cnsiva.quotes import Quotes
+from cnsiva.home import Home
+from cnsiva.config import quote_list
 from cnsiva.blogs import PythonBlog
 from cnsiva.utils import SnippetFormatizer, JsonFormatizer
 
@@ -41,11 +42,15 @@ def get_page_content(page_name):
 
     return _page_content  #.replace(' ', '&nbsp;')
 
+@app.route('/get_home', method=['GET'])
+def get_home():
+   """."""
+   return Home(context=bottle).get_content()
+
 @app.route('/get_quotes', method=['GET'])
 def get_quotes():
    """."""
-   _quote = Quotes(context=bottle).get_quote()
-   return _quote
+   return json.dumps(quote_list)
 
 @app.route('/fetch_blog_article/<param>', method=['GET'])
 def fetch_blog_article(param):

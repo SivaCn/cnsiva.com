@@ -74,3 +74,24 @@ span.line-break{
 .top-offset-header {
     margin-top: 20px;
 }
+
+.cn-terminal{
+    align-content: space-around;
+    height: 400px;
+    padding: 0 10px;
+    background-color: #FFF;
+    overflow-y : auto;
+    border-radius: 4px;
+    border-top: 20px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-image: url("arch_linux.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 70 70;
+}
+
+.cn-line-space-before{
+    margin-top: 20px;
+}
