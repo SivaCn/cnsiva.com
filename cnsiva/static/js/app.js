@@ -33,11 +33,11 @@ app.controller("homeOnLoadCtrl", function($scope, $http, $interval) {
 }); // end: controller:homeOnLoadCtrl
 
 
-app.config(function($stateProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
   var helloState = {
     name: 'hello',
     url: '/hello',
-    template: '<h3>hello world!</h3>'
+    templateUrl: '/skills.html'
   }
 
   var aboutState = {
@@ -48,8 +48,13 @@ app.config(function($stateProvider) {
 
   $stateProvider.state(helloState);
   $stateProvider.state(aboutState);
-});
 
+  // Set Home Page as default
+  $urlRouterProvider.when('', '/hello')
+
+  // Route to Home Page if any wrong url is given
+  $urlRouterProvider.otherwise('/hello')
+});
 
 app.controller("whoAmICtrl", function($scope, $http) {
 
@@ -60,4 +65,20 @@ app.controller("whoAmICtrl", function($scope, $http) {
     });
 
 }); // end: controller:whoAmICtrl
+
+app.run(function($rootScope){
+
+    $rootScope
+        .$on('$stateChangeStart',
+            function(event, toState, toParams, fromState, fromParams){
+                $(".page-loading").removeClass("hidden");
+        });
+
+    $rootScope
+        .$on('$stateChangeSuccess',
+            function(event, toState, toParams, fromState, fromParams){
+                $(".page-loading").addClass("hidden");
+        });
+
+});
 

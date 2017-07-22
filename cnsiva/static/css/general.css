@@ -95,3 +95,8 @@ span.line-break{
 .cn-line-space-before{
     margin-top: 20px;
 }
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
