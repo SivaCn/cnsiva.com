@@ -33,27 +33,49 @@ app.controller("homeOnLoadCtrl", function($scope, $http, $interval) {
 }); // end: controller:homeOnLoadCtrl
 
 
+app.controller("homePageCtrl", function($scope, $http) {
+
+    $http
+      .get("/get_home")
+      .then(function (response) {
+
+        $scope.ipAddr = response.data['ip_addr'];
+        $scope.gitHub = response.data['github'];
+
+    });
+
+    $http
+      .get("https://api.stackexchange.com/2.2/users/2820287?key=U4DMV*8nvpm3EOpvf69Rxw((&site=stackoverflow&order=desc&sort=reputation&filter=default")
+      .then(function (response) {
+
+        $scope.stackOverFlow = response.data['items'][0];
+
+    });
+
+}); // end: controller:homePageCtrl
+
 app.config(function($stateProvider, $urlRouterProvider) {
-  var helloState = {
-    name: 'hello',
-    url: '/hello',
-    templateUrl: '/skills.html'
+  var homeState = {
+    name: 'home',
+    url: '/home',
+    templateUrl: '/cn-home.html'
   }
 
   var aboutState = {
     name: 'about',
     url: '/about',
-    template: '<h3>Its the UI-Router hello world app!</h3>'
+    //template: '/cn-about.html'
+    templateUrl: '/cn-about.html'
   }
 
-  $stateProvider.state(helloState);
+  $stateProvider.state(homeState);
   $stateProvider.state(aboutState);
 
   // Set Home Page as default
-  $urlRouterProvider.when('', '/hello')
+  $urlRouterProvider.when('', '/home')
 
   // Route to Home Page if any wrong url is given
-  $urlRouterProvider.otherwise('/hello')
+  $urlRouterProvider.otherwise('/home')
 });
 
 app.controller("whoAmICtrl", function($scope, $http) {

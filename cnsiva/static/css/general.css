@@ -49,6 +49,7 @@
     width: 60%;
     padding: 10px;
     text-align: right;
+    font-size: 13px;
 }
 
 .cn-block-quote{
@@ -58,9 +59,13 @@
 
 .cn-super-font, /** Super class */
 .cn-logo-font /** Inherited for logo */ {
-    font-size: 15px;
+    font-size: 12px;
     /** please refer font section from the document. */
     font-family: 'Exo 2', sans-serif;
+}
+
+.cn-super-content-font /** Inherited for contents */{
+    font-size: 15px;
 }
 
 .cn-logo-font /** Overridden for logo */ {
@@ -73,6 +78,10 @@ span.line-break{
 
 .top-offset-header {
     margin-top: 20px;
+}
+
+.top-offset-10 {
+    margin-top: 50px;
 }
 
 .cn-terminal{
@@ -96,7 +105,31 @@ span.line-break{
     margin-top: 20px;
 }
 
+.cn-notes-in-red{
+   color: red;
+   font-size: 10px;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden !important;
+}
+
+.rotate {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -moz-transform: rotate(-90.0deg);
+  -o-transform: rotate(-90.0deg);
+  -webkit-transform: rotate(-90.0deg);
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+  transform: rotate(-90.0deg);
+}
+
+.cn-simple-table{
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }

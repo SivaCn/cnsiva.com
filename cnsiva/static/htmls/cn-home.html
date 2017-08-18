@@ -1,0 +1,65 @@
+<div ng-controller="homePageCtrl">
+  <div class="cn-super-content-font top-offset-10" align="center">
+    Hello, Welcome to Cn Siva's space !<br>
+    Your Public IP address is: {{ipAddr ? ipAddr : 'Loading...'}} <span class="cn-notes-in-red">*** No Data is logged</span>
+  </div>
+
+  <div class="cn-super-content-font top-offset-10" align="center">
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="https://github.com/sivacn" target="_blank"><b>GitHub Profile:</b></a>
+          <br>
+          <table class="cn-simple-table">
+            <tr>
+              <td>Name:</td>
+              <td>{{gitHub.name ? gitHub.name : 'Siva Cn'}} </td>
+            </tr>
+            <tr>
+              <td>Bio:</td>
+              <td>{{gitHub.bio ? gitHub.bio : 'Loading...'}} </td>
+            </tr>
+            <tr>
+              <td>Company:</td>
+              <td>{{gitHub.company ? gitHub.company : 'Loading...'}} </td>
+            </tr>
+            <tr>
+              <td>Active Since:</td>
+              <td>{{gitHub.created_at | date}} </td>
+            </tr>
+            <tr>
+              <td>Last Commited at:</td>
+              <td>{{gitHub.updated_at | date}} <td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <a href="{{stackOverFlow.link}}" target="_blank"><b>StackOverFlow Profile:</b></a>
+          <br>
+          <table class="cn-simple-table">
+            <tr>
+              <td>Name:</td>
+              <td>{{stackOverFlow.display_name ? stackOverFlow.display_name : 'Siva Cn'}} </td>
+            </tr>
+            <tr>
+              <td>Reputation:</td>
+              <td>{{stackOverFlow.reputation ? stackOverFlow.reputation : 'Loading...'}} </td>
+            </tr>
+            <tr>
+              <td>User Id:</td>
+              <td><a href="{{stackOverFlow.link}}" target="_blank">{{stackOverFlow.user_id ? stackOverFlow.user_id : 0}}</a></td>
+            </tr>
+            <tr>
+              <td>Badges:</td>
+              <td>
+                <div ng-repeat="(badgeName, count) in stackOverFlow.badge_counts">
+                  {{count}} {{badgeName}},
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
