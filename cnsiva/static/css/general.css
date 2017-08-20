@@ -129,6 +129,10 @@ span.line-break{
   transform: rotate(-90.0deg);
 }
 
+td:first-child {
+  padding-right:20px
+}
+
 .cn-simple-table{
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;

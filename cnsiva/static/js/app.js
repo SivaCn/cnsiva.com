@@ -68,8 +68,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: '/cn-about.html'
   }
 
+  var pythonBlogState = {
+    name: 'pythonblog',
+    url: '/pythonblog',
+    templateUrl: '/cn-python-blog.html'
+  }
+
   $stateProvider.state(homeState);
   $stateProvider.state(aboutState);
+  $stateProvider.state(pythonBlogState);
 
   // Set Home Page as default
   $urlRouterProvider.when('', '/home')
