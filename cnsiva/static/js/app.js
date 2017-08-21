@@ -32,6 +32,24 @@ app.controller("homeOnLoadCtrl", function($scope, $http, $interval) {
 
 }); // end: controller:homeOnLoadCtrl
 
+app.controller("pythonBlogPageCtrl", function($scope, $http) {
+
+    $http
+      .get("/get_python_blog_content")
+      .then(function (response) {
+
+        $scope.pythonBlogContent = response.data;
+
+    });
+
+   $scope.testAccordian = [
+     {'title': 't1', 'content': 'c1'},
+     {'title': 't2', 'content': 'c2'},
+     {'title': 't3', 'content': 'c3'},
+     {'title': 't4', 'content': 'c4'}
+   ];
+
+});
 
 app.controller("homePageCtrl", function($scope, $http) {
 
@@ -109,5 +127,29 @@ app.run(function($rootScope){
                 $(".page-loading").addClass("hidden");
         });
 
+});
+
+app.directive('simpleAccordion', function () {
+    return {
+        // attribute
+        restrict: 'A',
+        scope: {
+            // default: '400ms'
+            // options: 'milliseconds', 'slow', or 'fast'
+            toggleSpeed: '@toggleSpeed',
+            slideUpSpeed: '@slideUpSpeed',
+            // default: 'swing'
+            // options: 'swing', 'linear'
+            toggleEasing: '@toggleEasing',
+            slideUpEasing: '@slideUpEasing'
+        },
+        link: function (scope, element, attrs) {
+            element.find('.accordion-toggle').click(function () {
+                var elem = $(this);
+                elem.next().slideToggle(scope.toggleSpeed, scope.toggleEasing);
+                $(".accordion-content").not($(this).next()).slideUp(scope.slideUpSpeed, scope.slideUpEasing);
+            });
+        }
+    };
 });
 

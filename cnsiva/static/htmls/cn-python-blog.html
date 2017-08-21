@@ -1,5 +1,10 @@
-        <accordion>
-            <accordion-group title="title">This has a one word title.</accordion-group>
-            <accordion-group title="Title2='Title 2' ">This also has a one word title.</accordion-group>
-            <accordion-group title=" 'Title 3' ">This has a title with spaces!</accordion-group>
-        </accordion>
+<div ng-controller="pythonBlogPageCtrl" class="cn-super-content-font top-offset-10">
+
+  <div id="accordion" simple-accordion toggle-speed="fast" toggle-easing="linear" slide-up-speed="fast" slide-up-easing="linear" ng-repeat="x in pythonBlogContent">
+    <h4 class="accordion-toggle">{{ x.title }}</h4>
+    <div class="accordion-content default">
+      <p>{{ x.content }}</p>
+    </div>
+  </div>
+
+</div>

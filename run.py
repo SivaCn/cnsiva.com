@@ -5,7 +5,8 @@ from cnsiva import bottle
 from cnsiva import config
 from cnsiva.home import Home
 from cnsiva.config import quote_list
-from cnsiva.blogs import PythonBlog
+#from cnsiva.blogs import PythonBlog
+from cnsiva.python_blog import PythonBlog
 from cnsiva.utils import SnippetFormatizer, JsonFormatizer
 
 app = application = bottle.Bottle()
@@ -52,18 +53,18 @@ def get_quotes():
    """."""
    return json.dumps(quote_list)
 
-@app.route('/fetch_blog_article/<param>', method=['GET'])
-def fetch_blog_article(param):
-    """."""
-    _blog_type, _article = param.split("::")
-    if _blog_type.lower() == 'python':
-        blog_obj = PythonBlog()
-    else:
-        return "Invalid Blog Type: {0}".format(_blog_type)
+#@app.route('/fetch_blog_article/<param>', method=['GET'])
+#def fetch_blog_article(param):
+#    """."""
+#    _blog_type, _article = param.split("::")
+#    if _blog_type.lower() == 'python':
+#        blog_obj = PythonBlog()
+#    else:
+#        return "Invalid Blog Type: {0}".format(_blog_type)
+#
+#    return blog_obj.fetch_article(_article)
 
-    return blog_obj.fetch_article(_article)
-
-@app.route('/python_blog', method=['GET'])
+@app.route('/get_python_blog_content', method=['GET'])
 def python_blog():
     """."""
     python_blog_obj = PythonBlog()
